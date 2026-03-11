@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import MobbileNav from "./MobbileNav"
 
 const Header = () => {
   return (
@@ -10,6 +11,10 @@ const Header = () => {
         >
           Foodie.com
         </Link>
+        <div className="md:hidden">
+            <MobbileNav />
+
+        </div>
       </div>
     </div>
   )
