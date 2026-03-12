@@ -1,10 +1,18 @@
 import { Routes, Route } from "react-router-dom"
-import Layout from "@/layouts/layout"
+import HomePage from "./pages/HomePage.tsx"
+import Layout from "./layouts/Layout.tsx"
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout>Home</Layout>} />
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <HomePage />
+          </Layout>
+        }
+      />
       <Route path="/user-profile" element={<div>User Profile</div>} />
       <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>

@@ -19,7 +19,6 @@ app.use(errorHandler);
 // Connect to MongoDB
 connectDB()
   .then(() => {
-    // Middleware
     app.listen(env.PORT, () => {
       console.log(`Server is running on port ${env.PORT}`);
     });
