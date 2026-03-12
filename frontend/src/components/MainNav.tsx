@@ -4,7 +4,7 @@ const MainNav = () => {
   return (
     <Button
       variant="ghost"
-      className="font-bold hover:bg-white hover:text-orange-500"
+      className="cursor-pointer font-bold hover:bg-white hover:text-orange-500"
     >
       Log in
     </Button>
