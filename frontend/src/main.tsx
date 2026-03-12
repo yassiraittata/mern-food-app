@@ -8,10 +8,10 @@ import AppRoutes from "./routes"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
+    {/* <ThemeProvider> */}
       <Router>
         <AppRoutes />
       </Router>
-    </ThemeProvider>
+    {/* </ThemeProvider> */}
   </StrictMode>
 )
