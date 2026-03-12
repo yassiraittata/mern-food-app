@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Footer = () => {
   return (
     <div className="bg-orange-500 py-10">
@@ -6,8 +8,8 @@ const Footer = () => {
           MernEats.com
         </span>
         <span className="flex gap-4 font-bold tracking-tight text-white">
-          <span>Privacy Policy</span>
-          <span>Terms of Service</span>
+          <Link to="/privacy">Privacy Policy</Link>
+          <Link to="/term-of-use">Terms of Service</Link>
         </span>
       </div>
     </div>
