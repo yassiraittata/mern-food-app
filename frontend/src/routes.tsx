@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
-import HomePage from "./pages/HomePage.tsx"
-import Layout from "./layouts/Layout.tsx"
+import HomePage from "@/pages/HomePage.tsx"
+import Layout from "@/layouts/Layout.tsx"
 
 const AppRoutes = () => {
   return (
