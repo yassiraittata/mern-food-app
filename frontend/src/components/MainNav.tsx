@@ -5,7 +5,7 @@ import UsernameMenu from "./UsernameMenu"
 const MainNav = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0()
   return (
-    <>
+    <span className="flex items-center space-x-2">
       {isAuthenticated ? (
         <UsernameMenu />
       ) : (
@@ -17,7 +17,7 @@ const MainNav = () => {
           Log in
         </Button>
       )}
-    </>
+    </span>
   )
 }
 
