@@ -6,10 +6,14 @@ import connectDB from "./config/db.ts";
 import errorHandler from "./middlewares/errorHandler.ts";
 import env from "./lib/envalidate.ts";
 
+import userRoutrs from "./routes/user.routes.ts";
+
 const app = express();
 
 app.use(cors());
 app.use(express.json({ limit: "10mb" }));
+
+app.use("/api/users", userRoutrs);
 
 app.use((req, res, next) => {
   next(createHttpError(404, "Endpoint was not Found"));
