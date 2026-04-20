@@ -22,7 +22,6 @@ export const createUser: RequestHandler<
 
   const existingUser = await User.findOne({ auth0Id });
   if (existingUser) {
-    // next(createError(400, "User already exists"));
     return res.status(200).json(existingUser);
   }
 
