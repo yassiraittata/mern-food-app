@@ -8,7 +8,7 @@ type CreateUserRequest = {
 }
 
 export const useCreateUser = () => {
-  const createUser = async (data: CreateUserRequest) => {
+  const createUserFn = async (data: CreateUserRequest) => {
     const response = await fetch(`${API_BASE_URL}/users`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,11 +22,11 @@ export const useCreateUser = () => {
 
   const {
     mutateAsync: createUser,
-    isLoading,
+    isPending: isLoading,
     isError,
     isSuccess,
   } = useMutation({
-    mutationFn: createUser,
+    mutationFn: createUserFn,
   })
 
   return { createUser, isLoading, isError, isSuccess }
